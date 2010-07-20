@@ -1,0 +1,112 @@
+<!-- INCLUDE overall_header.html -->
+<!-- IF S_VERSION_KEYWORD -->
+<!--
+/**
+*
+*===================================================================
+*
+*  phpBB Code Repository -- Template File
+*-------------------------------------------------------------------
+*	Script info:
+* Version:		1.0.6 - "Juno"
+* Copyright:	(c) 2008, 2009 | Obsidian -- Infinityhouse Creations
+* License:		http://opensource.org/licenses/gpl-license.php  |  GNU Public License v2
+* Package:		Template
+*
+*===================================================================
+*
+*/
+//-->
+<!-- ENDIF -->
+
+<h2>{PAGE_TITLE}</h2>
+<div class="clear"></div>
+
+<div class="navbar">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<ul class="linklist thick-header-crs">
+			<li class="icon-home"><a href="{U_CODE_REPO}">{L_CODE_REPO_ROOT}</a> <strong>&#8249;</strong><!-- IF not VIEWING_DIR -->/<!-- ENDIF --><!-- BEGIN updir --><a href="{updir.LINK}">{updir.NAME}</a>/<!-- END updir --><!-- IF VIEWING_DIR --><!-- IF S_MODE_VIEW --><a href="{U_BROWSE_DIR}">{VIEWING_DIR}</a><!-- ELSE -->{VIEWING_DIR}<!-- ENDIF --><!-- ENDIF --></li>
+		</ul>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<br />
+
+<!-- IF S_MODE_BROWSE -->
+	<!-- IF S_NO_CONTENTS -->
+		<div class="panel">
+			<div class="inner"><span class="corners-top"><span></span></span>
+				{L_NO_CONTENTS}
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	<!-- ELSE -->
+		<div class="forumbg">
+			<div class="inner"><span class="corners-top"><span></span></span>
+				<ul class="topiclist">
+					<li class="header">
+						<dl class="icon">
+						<dt>{L_DIR_CONTENTS}</dt>
+						</dl>
+					</li>
+				</ul>
+				<ul class="topiclist forums">
+					<!-- BEGIN subdirrow -->
+						<li class="row bg1">
+							<dl class="icon" style="background-image: url({T_IMAGESET_PATH}/announce_read.gif); background-repeat: no-repeat;">
+								<dt style="width: 80%;"><a href="{subdirrow.U_VIEW_DIR}" class="forumtitle">{subdirrow.SUBDIR_PATH}</a>
+								<br />{L_FILETYPE_DIR}
+								</dt>
+							</dl>
+						</li>
+					<!-- END subdirrow -->
+					<!-- BEGIN filelistrow -->
+						<li class="row bg2">
+							<dl class="icon" style="background-image: url({T_IMAGESET_PATH}/topic_read.gif); background-repeat: no-repeat;">
+								<dt style="width: 80%;"><!-- IF filelistrow.U_VIEW_FILE --><a href="{filelistrow.U_VIEW_FILE}" class="topictitle">{filelistrow.FILE_PATH}</a><!-- ELSE -->{filelistrow.FILE_PATH}<!-- ENDIF -->
+								<!-- IF filelistrow.U_QUICK_DOWNLOAD or filelistrow.U_QUICK_HIGHLIGHT --><br /><!-- ENDIF --><!-- IF filelistrow.U_QUICK_HIGHLIGHT --><a href="{filelistrow.U_QUICK_HIGHLIGHT}">{filelistrow.FILE_TYPE}</a><!-- ELSE -->{filelistrow.FILE_TYPE}<!-- ENDIF --><!-- IF filelistrow.U_QUICK_DOWNLOAD --> &nbsp; {QUICK_DOWNLOAD_IMG} <a href="{filelistrow.U_QUICK_DOWNLOAD}">{L_QUICK_DOWNLOAD}</a><!-- ENDIF -->
+								</dt>
+							</dl>
+						</li>
+					<!-- END filelistrow -->
+				</ul>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	<!-- ENDIF -->
+<!-- ENDIF -->
+
+<!-- IF S_MODE_VIEW -->
+	<div class="clear"></div><br /><br />
+	
+	<div class="download blue-header">
+		<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="inner-download"> 
+				<!-- IF U_DOWNLOAD_LINK --><a href="{U_DOWNLOAD_LINK}" id="download-link">{L_DOWNLOAD_ME}</a><!-- ENDIF -->
+				<br /><br />{L_DOWNLOAD_NAME}: {DOWNLOAD_NAME}
+				<br />{L_DOWNLOAD_TYPE}: {DOWNLOAD_TYPE}
+				<br />{L_DOWNLOAD_SIZE}: {DOWNLOAD_SIZE}
+				<br />MD5: {DOWNLOAD_MD5}
+			</div>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	
+	<div class="clear"></div><br />
+	
+	<!-- IF not S_IS_IMAGE -->
+		<div class="code-size">
+			<dl class="codebox">
+				<dt>{DOWNLOAD_NAME} - <a href="{U_HLIGHT_LINK}">{L_HLIGHT}</a></dt>
+				<dd<!-- IF S_MAKE_TEXT_BIGGER --> style="font-size: 1.3em;"<!-- ENDIF -->><!-- IF not GESHI_ENABLED --><code style="max-height: none; white-space: normal;"><!-- ENDIF -->
+					{CODE_DATA}
+				<!-- IF not GESHI_ENABLED --></code><!-- ENDIF --></dd>
+			</dl>
+		</div>
+		
+	<!-- ELSE -->
+		<div style="margin-left: auto; margin-right: auto; align: center;"><img src="{REPO_IMAGE}" alt="" /></div>
+	<!-- ENDIF -->
+<!-- ENDIF -->
+
+<div class="clear"></div><br /><br />
+
+<div class="crs-version"><a href="{U_ABOUT_CRS}">{L_CRS_ABOUT}</a><!-- IF HIGHLIGHT_POWER --><br />{HIGHLIGHT_POWER}<!-- ENDIF --></div>
+
+<!-- INCLUDE overall_footer.html -->

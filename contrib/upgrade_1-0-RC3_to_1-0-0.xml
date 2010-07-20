@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.2.xsd">
+	<header>
+		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
+		
+		<title lang="en">phpBB Code Repository</title>
+		
+		<description lang="en">A Code Repository MOD, it allows the viewing of source code/images in the source directory, and also offers syntax highlighting of the source VIA GeSHi.</description>
+		
+		<author-notes lang="en">Be sure to allow read access to the source/ folder, along with keeping a file in the folder at all times for the server's sake.</author-notes>
+		
+		<author-group>
+			<author>
+				<realname>Obsidian</realname>
+				<username>Desdenova</username>
+				<homepage>http://www.infinityhouse.org/</homepage>
+			</author>
+		</author-group>
+		
+		<mod-version>1.0.0</mod-version>
+		
+		<installation>
+			<level>easy</level>
+			<time>300</time>
+			<target-version>3.0.4</target-version>
+		</installation>
+	</header>
+	
+	<action-group>
+		<copy>
+			<file from="root/code.php" to="code.php" />
+			<file from="root/adm/style/acp_crs_main.html" to="adm/style/acp_crs_main.html" />
+			<file from="root/includes/acp/acp_crs_main.php" to="includes/acp/acp_crs_main.php" />
+			<file from="root/includes/acp/info/acp_crs_main.php" to="includes/acp/info/acp_crs_main.php" />
+			<file from="root/includes/crs/bootstrap.php" to="includes/crs/bootstrap.php" />
+			<file from="root/includes/crs/crs_constants.php" to="includes/crs/crs_constants.php" />
+			<file from="root/includes/crs/crs_core.php" to="includes/crs/crs_core.php" />
+			<file from="root/includes/crs/crs_download.php" to="includes/crs/crs_download.php" />
+			<file from="root/includes/crs/crs_file_functions.php" to="includes/crs/crs_file_functions.php" />
+			<file from="root/includes/crs/crs_misc_functions.php" to="includes/crs/crs_misc_functions.php" />
+			<file from="root/install_crs/index.php" to="install_crs/index.php" />
+			<file from="root/language/en/mods/info_acp_crs_main.php" to="language/en/mods/info_acp_crs_main.php" />
+			<file from="root/language/en/mods/lang_crs.php" to="language/en/mods/lang_crs.php" />
+			<file from="root/language/en/mods/lang_crs_acp.php" to="language/en/mods/lang_crs_acp.php" />
+			<file from="root/language/en/mods/lang_crs_install.php" to="language/en/mods/lang_crs_install.php" />
+			<file from="root/language/en/mods/permissions_crs.php" to="language/en/mods/permissions_crs.php" />
+			<file from="root/source/.htaccess" to="source/.htaccess" />
+			<file from="root/styles/prosilver/template/crs_body.html" to="styles/prosilver/template/crs_body.html" />
+			<file from="root/styles/prosilver/theme/crs_style.css" to="styles/prosilver/theme/crs_style.css" />
+		</copy>
+		
+		<open src="styles/prosilver/template/overall_header.html">
+			<edit>
+				<find><![CDATA[<link href="{T_STYLESHEET_LINK}" rel="stylesheet" type="text/css" media="screen, projection" />]]></find>
+				<action type="after-add"><![CDATA[<!-- ## begin mod: phpBB Code Repository ## -->
+		<!-- IF GESHI_STYLE -->
+			<style type="text/css">
+			<!--
+				{GESHI_STYLE}
+			-->
+			</style>
+		<!-- ENDIF -->
+<!-- ## end mod: phpBB Code Repository ## -->]]></action>
+			</edit>
+		</open>
+		
+		<diy-instructions lang="en">Be sure to refresh the template and themes cache!  
+Then, run the DCI file at http://yoursite.com/path_to_forums/install_crs/index.php to update the database component of your installation.</diy-instructions>
+	</action-group>
+</mod>

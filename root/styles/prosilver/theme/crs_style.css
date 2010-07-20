@@ -1,0 +1,86 @@
+/**
+*
+*===================================================================
+*
+*  phpBB Code Repository -- Theme File
+*-------------------------------------------------------------------
+*	Script info:
+* Version:		1.0.6 - "Juno"
+* Copyright:	(c) 2008, 2009 | Obsidian -- Infinityhouse Creations
+* License:		http://opensource.org/licenses/gpl-license.php  |  GNU Public License v2
+* Package:		Theme
+*
+*===================================================================
+*
+*/
+
+/* Depreciated? */
+.source {
+	max-height: 800px;
+	font-size: 1.1em;
+}
+
+/* Depreciated? */
+ul.no-bottom-line-navlinks {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: none;
+}
+
+.thick-header-crs {
+	font-weight: bold;
+}
+
+.blue-header {
+	background: #ebebeb none repeat-x 0 0;
+	color: #FFFFFF;
+	margin-bottom: 4px;
+	padding: 0 5px;
+	background-color: #12A3EB;
+	background-image: url("{T_THEME_PATH}/images/bg_header.gif");
+}
+
+dl.codebox pre {
+	/* Also see tweaks.css */
+	overflow: auto;
+	display: block;
+	height: auto;
+	white-space: normal;
+	padding-top: 5px;
+	font: 0.9em Monaco, "Andale Mono","Courier New", Courier, mono;
+	line-height: 1.3em;
+	margin: 2px 0;
+}
+
+.download {
+margin-right: 10px;
+margin-left: 10px;
+width: 300px;
+float: left;
+}
+
+.inner-download {
+margin-top: 5px;
+margin-left: 7px;
+height: 81px;
+font-weight: bold;
+}
+
+.crs-version {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#download-link {
+color: #d3d3d3;
+}
+
+#download-link:hover {
+color: #ffffff;
+text-decoration: none;
+}
+
+.code-size {
+margin-left: 9px;
+margin-right: 9px;
+}

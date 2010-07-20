@@ -1,0 +1,123 @@
+<!-- INCLUDE overall_header.html -->
+<!-- IF S_VERSION_KEYWORD -->
+<!--
+/**
+*
+*===================================================================
+*
+*  phpBB Code Repository -- ACP Module Template File
+*-------------------------------------------------------------------
+*	Script info:
+* Version:		1.0.6 - "Juno"
+* Copyright:	(c) 2008, 2009 | Obsidian -- Infinityhouse Creations
+* License:		http://opensource.org/licenses/gpl-license.php  |  GNU Public License v2
+* Package:		ACP
+*
+*===================================================================
+*
+*/
+//-->
+<!-- ENDIF -->
+
+<a name="maincontent"></a>
+
+<h1>{L_ACP_CRS_MAIN_SETTINGS}</h1>
+
+<p>{L_ACP_CRS_MAIN_SETTINGS_EXPLAIN}</p>
+
+<!-- IF S_ERROR -->
+	<div class="errorbox">
+		<h3>{L_WARNING}</h3>
+		<p>{ERROR_MSG}</p>
+	</div>
+<!-- ENDIF -->
+
+	<form id="acp_crs_main" method="post" action="{U_ACTION}">
+
+		<!-- IF S_IN_VERSION_CHECK -->
+
+			<!-- IF not UP_TO_DATE -->
+				<div class="errorbox">
+					<h3>{L_UPDATE_AVAILABLE}</h3>
+					<p>{UPDATE_INSTRUCTIONS}</p>
+				</div>
+			<!-- ELSE -->
+				<div class="successbox">
+					<p>{L_CRS_IS_UP_TO_DATE}</p>
+				</div>
+			<!-- ENDIF -->
+
+			<fieldset>
+				<legend>{L_VERSION_CHECK}</legend>
+
+				<dl>
+					<dt><label>{L_CURRENT_CRS_VERSION}</label></dt>
+					<dd><strong>{CURRENT_VERSION}</strong></dd>
+				</dl>
+
+				<dl>
+					<dt><label>{L_REMOTE_CRS_VERSION}</label></dt>
+					<dd><strong>{LATEST_VERSION}</strong></dd>
+				</dl>
+
+		<!-- ELSE -->
+		
+		<fieldset>
+			<legend>{L_VERSION_CHECK}</legend>
+
+			<dl>
+				<dt><label>{L_CURRENT_CRS_VERSION}</label></dt>
+				<dd><strong>{CRS_VERSION}</strong></dd>
+			</dl>
+		
+		<!-- ENDIF -->
+
+			<dl>
+				<dt><label for="checkversion">{L_CHECK_FOR_UPDATES}</label></dt>
+				<dd><input class="button2" type="submit" id="checkversion" name="checkversion" value="{L_RUN}" /></dd>
+			</dl>
+		</fieldset>
+	
+
+	<!-- IF S_FOUNDER -->
+	<fieldset>
+		<legend>{L_CRS_RECACHE}</legend>
+		<form id="action_purge_crs_cache_form" method="post" action="{U_ACTION}">
+			<dl>
+				<dt><label for="recache">{L_CRS_RECACHE_FILES}</label></dt>
+				<dd><input class="button2" type="submit" id="recache" name="recache" value="{L_RUN}" /></dd>
+			</dl>
+		</form>
+	</fieldset>
+	<!-- ENDIF -->
+
+		<fieldset>
+			<legend>{L_GENERAL_OPTIONS}</legend>
+			<dl>
+				<dt><label for="crs_source_path">{L_CRS_SOURCE_PATH}:</label><br /><span>{L_CRS_SOURCE_PATH_EXPLAIN}</span></dt>
+				<dd><input id="crs_source_path" name="crs_source_path" value="{CRS_SOURCE_PATH}" type="text" maxlength="255" /></dd>
+			</dl>
+
+			<dl>
+				<dt><label for="crs_enabled">{L_CRS_ENABLED}:</label><br /><span>{L_CRS_ENABLED_EXPLAIN}</span></dt>
+				<dd><label><input type="radio" class="radio" id="crs_enabled" name="crs_enabled" value="1"<!-- IF CRS_ENABLED--> checked="checked"<!-- ENDIF --> /> {L_ENABLED}</label>
+					<label><input type="radio" class="radio" name="crs_enabled" value="0"<!-- IF not CRS_ENABLED --> checked="checked"<!-- ENDIF --> /> {L_DISABLED}</label></dd>
+			</dl>
+
+			<dl>
+				<dt><label for="crs_dump_geshi_css">{L_CRS_DUMP_GESHI_CSS}:</label><br /><span>{L_CRS_DUMP_GESHI_CSS_EXPLAIN}</span></dt>
+				<dd><label><input type="radio" class="radio" id="crs_dump_geshi_css" name="crs_dump_geshi_css" value="1"<!-- IF CRS_DUMP_GESHI_CSS --> checked="checked"<!-- ENDIF --> /> {L_ENABLED}</label>
+					<label><input type="radio" class="radio" name="crs_dump_geshi_css" value="0"<!-- IF not CRS_DUMP_GESHI_CSS --> checked="checked"<!-- ENDIF --> /> {L_DISABLED}</label></dd>
+			</dl>
+		</fieldset>
+
+
+		<fieldset class="submit-buttons">
+			<legend>{L_SUBMIT}</legend>
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+			{S_FORM_TOKEN}
+		</fieldset>
+	</form>
+
+<!-- INCLUDE overall_footer.html -->
