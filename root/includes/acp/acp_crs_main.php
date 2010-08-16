@@ -6,8 +6,9 @@
 *  phpBB Code Repository -- ACP Module File
 *-------------------------------------------------------------------
 *	Script info:
-* Version:		1.0.6 - "Juno"
-* Copyright:	(c) 2008, 2009 | Obsidian -- Infinityhouse Creations
+* Version:		1.0.0 - "Cataram"
+* Copyright:	Current Contributor(c) 2010 | Unknown Bliss
+* Copyright:	Ex-Contributor (c) 2008, 2009 | Obsidian
 * License:		http://opensource.org/licenses/gpl-license.php  |  GNU Public License v2
 * Package:		ACP
 *

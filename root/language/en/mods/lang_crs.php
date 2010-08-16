@@ -3,13 +3,14 @@
 *
 *===================================================================
 *
-*  phpBB Code Repository -- Language File
+*  phpBB Code Repository -- Main File
 *-------------------------------------------------------------------
 *	Script info:
-* Version:		1.0.6 - "Juno"
-* Copyright:	(c) 2008, 2009 | Obsidian -- Infinityhouse Creations
+* Version:		1.0.0 - "Cataram"
+* Copyright:	Current Contributor(c) 2010 | Unknown Bliss
+* Copyright:	Ex-Contributor (c) 2008, 2009 | Obsidian
 * License:		http://opensource.org/licenses/gpl-license.php  |  GNU Public License v2
-* Package:		Language [en]
+* Package:		Language  [en_GB]
 *
 *===================================================================
 *
@@ -104,11 +105,10 @@ $lang = array_merge($lang, array(
 	
 	'HIGHLIGHT_POWER'			=> 'Syntax Highlighting powered by <a href="http://qbnz.com/highlighter/">GeSHi</a> %s',
 	
-	'CODE_REPO_ABOUT'			=> "The phpBB Code Repository was developed by <a href=\"http://www.infinityhouse.org/\" style='font-weight: bold;'>Obsidian</a>, and originally began in May 2008 as a small, 
-							private MOD for housing the source code for a few file's using the phpBB interface, and slowly grew into a larger, 
-							more powerful MOD for public use, and now even features the powerful PHP-based syntax highlighter, <a href=\"http://qbnz.com/highlighter/\" style='font-weight: bold;'>GeSHi</a>.  
-							<br />It is available for public use under the <a href=\"http://opensource.org/licenses/gpl-license.php\">GNU General Public License (Version 2)</a>.
-							<br /><br />Also, kudos to eviL&lt;3 for his phpBB3 Pastebin MOD (Great inspiration!), which was had it's GeSHi integration transplanted into the phpBB Code Repository.",
+	'CODE_REPO_ABOUT'			=> "The phpBB Code Repository was developed by <a href=\"http://www.infinityhouse.org/\" style='font-weight: bold;'>Obsidian</a>. 
+									It is now developed by <a href=\"http://www.unknownbliss.co.uk/\" style='font-weight: bold;'>Unknown Bliss</a>. Thanks go to
+									the developers and creatores of GeSHi Highlighting and Evil<3 for his pastebin mod which inspired the orginal author to make 
+									this modification.",
 	
 //Identifying filetypes...
 	'LANGUAGES'		=> array(

@@ -6,16 +6,17 @@
 *  phpBB Code Repository -- Bootstrap File
 *-------------------------------------------------------------------
 *	Script info:
-* Version:		1.0.6 - "Juno"
-* Copyright:	(c) 2008, 2009 | Obsidian -- Infinityhouse Creations
+* Version:		1.0.0 - "Cataram"
+* Copyright:	Current Contributor(c) 2010 | Unknown Bliss
+* Copyright:	Ex-Contributor (c) 2008, 2009 | Obsidian
 * License:		http://opensource.org/licenses/gpl-license.php  |  GNU Public License v2
-* Package:		Includes
+* Package:		Include
 *
 *===================================================================
 *
 * This Bootstrap system has been backported from phpBB "Ascraeus". 
 *   The main intention is to allow an easier code layout for the coding 
-*     of phpBB Code Repository 2.0.x "Xerxes", and for better organization.
+*     of phpBB Code Repository 2.0.x, and for better organization.
 *
 * Bootstrap will kill uninstalled/unauthorized access attempts and try to force installation/upgrades automatically 
 * 	if new updated files are detected, and will automatically load needed classes & files for each mode.

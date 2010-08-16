@@ -3,11 +3,12 @@
 *
 *===================================================================
 *
-*  phpBB Code Repository -- DCI File
+*  phpBB Code Repository -- Main File
 *-------------------------------------------------------------------
 *	Script info:
-* Version:		1.0.6 - "Juno"
-* Copyright:	(c) 2008, 2009 - Obsidian || Infinityhouse Creations
+* Version:		1.0.0 - "Cataram"
+* Copyright:	Current Contributor(c) 2010 | Unknown Bliss
+* Copyright:	Ex-Contributor (c) 2008, 2009 | Obsidian
 * License:		http://opensource.org/licenses/gpl-license.php  |  GNU Public License v2
 * Package:		Install
 *
@@ -19,8 +20,8 @@
 * Version info -
 * @ignore
 */
-define('CRS_VERSION', '1.0.6');
-define('CRS_VERSION_BIG', 'phpBB Code Repository Version 1.0.6');
+define('CRS_VERSION', '1.0.0');
+define('CRS_VERSION_BIG', 'phpBB Code Repository Version 1.0.0');
 
 /**
 * @ignore
@@ -30,9 +31,6 @@ $phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : '../';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
 include($phpbb_root_path . 'common.' . $phpEx);
 	
-/**
-* In Code Repository 1.0.2+, we'll start using PHPBB_ROOT_PATH and PHP_EXT constants where we can. Onwards, progress!
-*/
 if(!defined('PHPBB_ROOT_PATH'))
 {
 	define('PHPBB_ROOT_PATH', $phpbb_root_path);
@@ -152,22 +150,22 @@ switch($mode)
 				//Nil.
 			case '1.0.0 RC 3':
 				//Nil, once again.
-			case '1.0.0':
+			case '1.1.0':
 				//No DB changes this go around.
-			case '1.0.1':
+			case '1.2.0':
 				// Code Repository update for 1.0.2 ($id$ replacement feature)
 				set_config('crs_use_idinfo_replace', 0);
 				set_config('crs_idinfo_replacement', '$ Code Repository File $');
-			case '1.0.2':
+			case '1.3.0':
 				//Nil...again...
-			case '1.0.3':
+			case '1.4.0':
 				//Nil...this was a codebase update.
-			case '1.0.4':
+			case '1.5.0':
 				//Remove the $id$ replacement feature.
 				$sql = 'DELETE FROM ' . CONFIG_TABLE . "
 					WHERE config_value = 'crs_use_idinfo_replace' OR config_value = 'crs_idinfo_replacement'";
 				$db->sql_query($sql);
-			case '1.0.5':
+			case '1.6.0':
 				// Nil for DB updates.
 				
 			break;

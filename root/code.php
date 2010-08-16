@@ -6,14 +6,13 @@
 *  phpBB Code Repository -- Main File
 *-------------------------------------------------------------------
 *	Script info:
-* Version:		1.0.6 - "Juno"
-* Copyright:	(c) 2008, 2009 | Obsidian -- Infinityhouse Creations
+* Version:		1.0.0 - "Cataram"
+* Copyright:	Current Contributor(c) 2010 | Unknown Bliss
+* Copyright:	Ex-Contributor (c) 2008, 2009 | Obsidian
 * License:		http://opensource.org/licenses/gpl-license.php  |  GNU Public License v2
 * Package:		phpBB3
 *
 *===================================================================
-*
-* @TODO:  Search mode?  Look for specific dir or file?  Hrrrmmm....
 *
 */
 
@@ -21,8 +20,8 @@
 * Version info - 
 * @ignore
 */
-define('CRS_VERSION', '1.0.6');
-define('CRS_VERSION_BIG', 'phpBB Code Repository Version 1.0.6');
+define('CRS_VERSION', '1.0.0');
+define('CRS_VERSION_BIG', 'phpBB Code Repository Version 1.0.0');
 
 /**
 * @ignore
