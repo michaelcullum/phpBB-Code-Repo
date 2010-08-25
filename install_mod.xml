@@ -66,7 +66,7 @@
 			</edit>
 			<edit>
 				<find><![CDATA[<!-- IF S_DISPLAY_MEMBERLIST --><li class="icon-members"><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}">{L_MEMBERLIST}</a></li><!-- ENDIF -->]]></find>
-				<action type="before-add"><![CDATA[<!-- ## begin mod: phpBB Code Repository ## -->					<!-- IF U_CODE_REPO --><li class="icon-pages"><a href="{U_CODE_REPO}" title="{L_VIEW_CODE_REPO_MORE}">{L_VIEW_CODE_REPO}</a></li><!-- ENDIF --><!-- ## end mod: phpBB Code Repository ## -->]]></action>
+				<action type="before-add"><![CDATA[<!-- INCLUDE crs/overall_header_nav.html -->]]></action>
 			</edit>
 		</open>
 		<open src="styles/prosilver/theme/stylesheet.css">
