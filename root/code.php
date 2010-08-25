@@ -180,7 +180,7 @@ switch ($mode)
 page_header($l_title);
 
 $template->set_filenames(array(
-	'body' => 'crs_body.html'
+	'body' => 'crs/crs_body.html'
 ));
 page_footer();
 
